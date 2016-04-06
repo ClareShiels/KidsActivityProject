@@ -1,4 +1,4 @@
-﻿namespace MiniProjectWebService.Models
+﻿namespace KidsActivityProject.Models
 {
     public enum SubDue { yes, no }
     public class Enrollment
@@ -13,6 +13,6 @@
         //Navigation properties
         //An enrollment has 1 child and 1 activity
         public virtual Activity Activity { get; set; }
-        public virtual Child Child { get; set; }
+        public virtual Kid Child { get; set; }
     }
 }

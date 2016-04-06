@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\KidController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\ActivityContext.cs" />
     <Compile Include="DAL\ActivityInitializer.cs" />
@@ -135,7 +136,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Activity.cs" />
-    <Compile Include="Models\Child.cs" />
+    <Compile Include="Models\Kid.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -174,6 +175,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Kid\Create.cshtml" />
+    <Content Include="Views\Kid\Delete.cshtml" />
+    <Content Include="Views\Kid\Details.cshtml" />
+    <Content Include="Views\Kid\Edit.cshtml" />
+    <Content Include="Views\Kid\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

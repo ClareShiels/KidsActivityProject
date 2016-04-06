@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace MiniProjectWebService.Models
+namespace KidsActivityProject.Models
 {
     //enums for the Child Table Model
     public enum Medical { yes, no };
     public enum FirstAid { yes, no };
 
-    public class Child
+    public class Kid
     {
         //Auto properties - constraints to be applied
         public int ChildId { get; set; }

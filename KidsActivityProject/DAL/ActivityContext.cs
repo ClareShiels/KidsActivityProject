@@ -1,8 +1,8 @@
-﻿using MiniProjectWebService.Models;
+﻿using KidsActivityProject.Models;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace MiniProjectWebService.DAL
+namespace KidsActivityProject.DAL
 {
     public class ActivityContext : DbContext
     {
@@ -10,13 +10,13 @@ namespace MiniProjectWebService.DAL
         {
         }
 
-        public DbSet<Child> Children { get; set; }
+        public DbSet<Kid> Kids { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
-        public DbSet<Activity> Activitiess { get; set; }
+        public DbSet<Activity> Activities { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        }
+        }*/
     }
 }

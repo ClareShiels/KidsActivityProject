@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace MiniProjectWebService.Models
+namespace KidsActivityProject.Models
 {
     public enum Day { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };
 
