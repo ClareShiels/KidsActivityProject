@@ -14,9 +14,9 @@ namespace KidsActivityProject.DAL
         public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Activity> Activities { get; set; }
 
-        /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        }*/
+        }
     }
 }

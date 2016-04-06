@@ -13,6 +13,6 @@
         //Navigation properties
         //An enrollment has 1 child and 1 activity
         public virtual Activity Activity { get; set; }
-        public virtual Kid Child { get; set; }
+        public virtual Kid Kid { get; set; }
     }
 }

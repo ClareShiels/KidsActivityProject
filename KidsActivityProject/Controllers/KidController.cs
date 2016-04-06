@@ -18,7 +18,7 @@ namespace KidsActivityProject.Controllers
         // GET: Child
         public ActionResult Index()
         {
-            return View(db.Children.ToList());
+            return View(db.Kids.ToList());
         }
 
         // GET: Child/Details/5
@@ -28,12 +28,12 @@ namespace KidsActivityProject.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Kid child = db.Children.Find(id);
-            if (child == null)
+            Kid kid = db.Kids.Find(id);
+            if (kid == null)
             {
                 return HttpNotFound();
             }
-            return View(child);
+            return View(kid);
         }
 
         // GET: Child/Create
@@ -47,16 +47,16 @@ namespace KidsActivityProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ChildId,FirstName,LastName,Address,DOB,MedicalIssues,MedicalIntervention,GuardianFirstName,GuardianLastName,GuardianContactNumber,ContactEmail")] Kid child)
+        public ActionResult Create([Bind(Include = "ChildId,FirstName,LastName,Address,DOB,MedicalIssues,MedicalIntervention,GuardianFirstName,GuardianLastName,GuardianContactNumber,ContactEmail")] Kid kid)
         {
             if (ModelState.IsValid)
             {
-                db.Children.Add(child);
+                db.Kids.Add(kid);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(child);
+            return View(kid);
         }
 
         // GET: Child/Edit/5
@@ -66,12 +66,12 @@ namespace KidsActivityProject.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Kid child = db.Children.Find(id);
-            if (child == null)
+            Kid kid = db.Kids.Find(id);
+            if (kid == null)
             {
                 return HttpNotFound();
             }
-            return View(child);
+            return View(kid);
         }
 
         // POST: Child/Edit/5
@@ -79,15 +79,15 @@ namespace KidsActivityProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ChildId,FirstName,LastName,Address,DOB,MedicalIssues,MedicalIntervention,GuardianFirstName,GuardianLastName,GuardianContactNumber,ContactEmail")] Kid child)
+        public ActionResult Edit([Bind(Include = "ChildId,FirstName,LastName,Address,DOB,MedicalIssues,MedicalIntervention,GuardianFirstName,GuardianLastName,GuardianContactNumber,ContactEmail")] Kid kid)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(child).State = EntityState.Modified;
+                db.Entry(kid).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(child);
+            return View(kid);
         }
 
         // GET: Child/Delete/5
@@ -97,12 +97,12 @@ namespace KidsActivityProject.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Kid child = db.Children.Find(id);
-            if (child == null)
+            Kid kid = db.Kids.Find(id);
+            if (kid == null)
             {
                 return HttpNotFound();
             }
-            return View(child);
+            return View(kid);
         }
 
         // POST: Child/Delete/5
@@ -110,8 +110,8 @@ namespace KidsActivityProject.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Kid child = db.Children.Find(id);
-            db.Children.Remove(child);
+            Kid child = db.Kids.Find(id);
+            db.Kids.Remove(child);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

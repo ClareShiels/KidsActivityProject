@@ -11,7 +11,7 @@ namespace KidsActivityProject.Models
     public class Kid
     {
         //Auto properties - constraints to be applied
-        public int ChildId { get; set; }
+        public int ID { get; set; }
 
         [Required]
         public string FirstName { get; set; }
@@ -22,7 +22,7 @@ namespace KidsActivityProject.Models
         [Required]
         public string Address { get; set; }
 
-        [Required]
+       
         public DateTime DOB { get; set; }
 
         [Required]

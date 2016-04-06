@@ -1,4 +1,4 @@
-﻿@model IEnumerable<KidsActivityProject.Models.Child>
+﻿@model IEnumerable<KidsActivityProject.Models.Kid>
 
 @{
     ViewBag.Title = "Index";
@@ -77,9 +77,9 @@
             @Html.DisplayFor(modelItem => item.ContactEmail)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ChildId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ChildId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ChildId })
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>
 }
