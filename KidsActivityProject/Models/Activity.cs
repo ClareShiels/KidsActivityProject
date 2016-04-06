@@ -9,7 +9,7 @@ namespace KidsActivityProject.Models
     public class Activity
     {
         //auto properties
-        public int ActivityId { get; set; }
+        public int ActivityID { get; set; }
 
         [Required]
         [StringLength(20, MinimumLength = 5)]

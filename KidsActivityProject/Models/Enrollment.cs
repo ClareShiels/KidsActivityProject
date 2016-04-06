@@ -4,9 +4,9 @@
     public class Enrollment
     {
         //auto properties
-        public int EnrollmentId { get; set; }
-        public int ChildId { get; set; }
-        public int ActivityId { get; set; }
+        public int EnrollmentID { get; set; }
+        public int ChildID { get; set; }
+        public int ActivityID { get; set; }
         public SubDue PaymentDue { get; set; }
 
 

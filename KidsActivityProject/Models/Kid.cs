@@ -11,7 +11,7 @@ namespace KidsActivityProject.Models
     public class Kid
     {
         //Auto properties - constraints to be applied
-        public int ID { get; set; }
+        public int KidID { get; set; }
 
         [Required]
         public string FirstName { get; set; }
