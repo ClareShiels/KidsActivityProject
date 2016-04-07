@@ -5,7 +5,7 @@
     {
         //auto properties
         public int EnrollmentID { get; set; }
-        public int ChildID { get; set; }
+        public int KidID { get; set; }
         public int ActivityID { get; set; }
         public SubDue PaymentDue { get; set; }
 

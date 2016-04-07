@@ -83,7 +83,7 @@ namespace KidsActivityProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EnrollmentID,KidID,ActivityId,PaymentDue")] Enrollment enrollment)
+        public ActionResult Edit([Bind(Include = "EnrollmentID,KidID,ActivityID,PaymentDue")] Enrollment enrollment)
         {
             if (ModelState.IsValid)
             {
