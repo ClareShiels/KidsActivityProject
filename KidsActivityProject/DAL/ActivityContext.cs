@@ -8,6 +8,7 @@ namespace KidsActivityProject.DAL
     {
         public ActivityContext() : base("ActivityContext")
         {
+            Database.SetInitializer<ActivityContext>(new DropCreateDatabaseAlways<ActivityContext>());
         }
 
         public DbSet<Kid> Kids { get; set; }
